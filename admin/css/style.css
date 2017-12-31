@@ -1,0 +1,14 @@
+.container{
+    margin-top: 50px;
+}
+a{
+    font-size: 13px;
+}
+.btn{
+    font-size: 13px;
+}
+.form-signin {
+  margin: 0 auto;
+  max-width: 330px;
+  padding: 15px;
+}

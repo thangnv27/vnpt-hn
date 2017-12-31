@@ -1,0 +1,1532 @@
+/* Font */
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url("../../../styles/fonts/SourceSansPro-ExtraLight.eot");
+  src: url("../../../styles/fonts/SourceSansPro-ExtraLight.eot?#iefix") format("embedded-opentype"), url("../../../styles/fonts/SourceSansPro-ExtraLight.woff") format("woff"), url("../../../styles/fonts/SourceSansPro-ExtraLight.ttf") format("truetype"), url("../../../styles/fonts/SourceSansPro-ExtraLight.svg#SourceSansPro") format("svg");
+  font-weight: 200;
+  font-style: normal; }
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url("../../../styles/fonts/SourceSansPro-Light.eot");
+  src: url("../../../styles/fonts/SourceSansPro-Light.eot?#iefix") format("embedded-opentype"), url("../../../styles/fonts/SourceSansPro-Light.woff") format("woff"), url("../../../styles/fonts/SourceSansPro-Light.ttf") format("truetype"), url("../../../styles/fonts/SourceSansPro-Light.svg#SourceSansPro") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+/*! fancyBox v2.1.4 fancyapps.com | fancyapps.com/fancybox/#license */
+.fancybox-wrap,
+.fancybox-skin,
+.fancybox-outer,
+.fancybox-inner,
+.fancybox-image,
+.fancybox-wrap iframe,
+.fancybox-wrap object,
+.fancybox-nav,
+.fancybox-nav span,
+.fancybox-tmp {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: none;
+  vertical-align: top; }
+
+.fancybox-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 8020; }
+
+.fancybox-skin {
+  position: relative;
+  background: #f9f9f9;
+  color: #444;
+  text-shadow: none;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px; }
+
+.fancybox-opened {
+  z-index: 8030; }
+
+.fancybox-opened .fancybox-skin {
+  -webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); }
+
+.fancybox-outer, .fancybox-inner {
+  position: relative; }
+
+.fancybox-inner {
+  overflow: hidden; }
+
+.fancybox-type-iframe .fancybox-inner {
+  -webkit-overflow-scrolling: touch; }
+
+.fancybox-error {
+  color: #444;
+  font: 14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+  margin: 0;
+  padding: 15px;
+  white-space: nowrap; }
+
+.fancybox-image, .fancybox-iframe {
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+.fancybox-image {
+  max-width: 100%;
+  max-height: 100%; }
+
+#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
+  background-image: url("../../../images/fancybox/fancybox_sprite.png"); }
+
+#fancybox-loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -22px;
+  margin-left: -22px;
+  background-position: 0 -108px;
+  opacity: 0.8;
+  cursor: pointer;
+  z-index: 8060; }
+
+#fancybox-loading div {
+  width: 44px;
+  height: 44px;
+  background: url("../../../images/fancybox/fancybox_loading.gif") center center no-repeat; }
+
+.fancybox-close {
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  z-index: 8040; }
+
+.fancybox-nav {
+  position: absolute;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  cursor: pointer;
+  text-decoration: none;
+  background: transparent url("../../../images/fancybox/blank.gif");
+  -webkit-tap-highlight-color: transparent;
+  z-index: 8040; }
+
+.fancybox-prev {
+  left: 0; }
+
+.fancybox-next {
+  right: 0; }
+
+.fancybox-nav span {
+  position: absolute;
+  top: 50%;
+  width: 36px;
+  height: 34px;
+  margin-top: -18px;
+  cursor: pointer;
+  z-index: 8040;
+  visibility: hidden; }
+
+.fancybox-prev span {
+  left: 10px;
+  background-position: 0 -36px; }
+
+.fancybox-next span {
+  right: 10px;
+  background-position: 0 -72px; }
+
+.fancybox-nav:hover span {
+  visibility: visible; }
+
+.fancybox-tmp {
+  position: absolute;
+  top: -99999px;
+  left: -99999px;
+  visibility: hidden;
+  max-width: 99999px;
+  max-height: 99999px;
+  overflow: visible !important; }
+
+/* Overlay helper */
+.fancybox-lock {
+  overflow: hidden; }
+
+.fancybox-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  display: none;
+  z-index: 8010;
+  background: url("../../../images/fancybox/fancybox_overlay.png"); }
+
+.fancybox-overlay-fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0; }
+
+.fancybox-lock .fancybox-overlay {
+  overflow: auto;
+  overflow-y: scroll; }
+
+/* Title helper */
+.fancybox-title {
+  visibility: hidden;
+  font: normal 13px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+  position: relative;
+  text-shadow: none;
+  z-index: 8050; }
+
+.fancybox-opened .fancybox-title {
+  visibility: visible; }
+
+.fancybox-title-float-wrap {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  margin-bottom: -35px;
+  z-index: 8050;
+  text-align: center; }
+
+.fancybox-title-float-wrap .child {
+  display: inline-block;
+  margin-right: -100%;
+  padding: 2px 20px;
+  background: transparent;
+  /* Fallback for web browsers that doesn't support RGBa */
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  text-shadow: 0 1px 2px #222;
+  color: #FFF;
+  font-weight: bold;
+  line-height: 24px;
+  white-space: nowrap; }
+
+.fancybox-title-outside-wrap {
+  position: relative;
+  margin-top: 10px;
+  color: #fff; }
+
+.fancybox-title-inside-wrap {
+  padding-top: 10px; }
+
+.fancybox-title-over-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  padding: 10px;
+  background: #000;
+  background: rgba(0, 0, 0, 0.8); }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  #LiveHelpScroll {
+    right: 5px; } }
+#LiveHelpEmbedded * {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  box-sizing: content-box; }
+
+#LiveHelpEmbedded div, #LiveHelpEmbedded a {
+  font-family: "Helvetica Neue", "Segoe UI", Verdana, Arial, sans-serif; }
+
+#LiveHelpEmbedded a.fancybox {
+  border-bottom: none !important; }
+
+#LiveHelpEmbedded div {
+  color: #000; }
+
+#LiveHelpEmbedded .message, #LiveHelpEmbedded .message div {
+  font-weight: normal !important; }
+
+#LiveHelpEmbedded a:link, #LiveHelpEmbedded a:visited, #LiveHelpEmbedded a:active {
+  color: #333399;
+  text-decoration: none;
+  border-bottom-width: 0.05em;
+  border-bottom-style: solid;
+  border-bottom-color: #CCCCCC; }
+
+#LiveHelpEmbedded a:hover {
+  color: #333399;
+  text-decoration: none;
+  border-bottom-width: 0.05em;
+  border-bottom-style: solid;
+  border-bottom-color: #333399; }
+
+#LiveHelpScroll div {
+  font-family: "Helvetica Neue", "Segoe UI", Verdana, Arial, sans-serif;
+  font-size: 12px; }
+
+#LiveHelpScroll::-webkit-scrollbar-track {
+  visibility: hidden;
+  /* doesn't seem to work */ }
+
+#LiveHelpScroll::-webkit-scrollbar {
+  position: absolute;
+  width: 8px;
+  height: 8px; }
+
+#LiveHelpScroll::-webkit-scrollbar-button:start:decrement {
+  display: block;
+  width: 5px;
+  height: 5px;
+  background-color: transparent; }
+
+#LiveHelpScroll::-webkit-scrollbar-button:end:increment {
+  display: block;
+  width: 5px;
+  height: 5px;
+  background-color: transparent; }
+
+#LiveHelpScroll::-webkit-scrollbar-track:enabled {
+  background-color: transparent; }
+
+#LiveHelpScroll::-webkit-scrollbar-track-piece {
+  background-color: transparent;
+  border: none;
+  margin: 8px 0 5px 0; }
+
+#LiveHelpScroll::-webkit-scrollbar-thumb:vertical {
+  height: 30px;
+  border: 1px solid rgba(140, 140, 140, 0.5);
+  background-color: rgba(155, 155, 155, 0.5);
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), inset 0 0 1px rgba(255, 255, 255, 0.8);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), inset 0 0 1px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), inset 0 0 1px rgba(255, 255, 255, 0.8);
+  -webkit-transition: background-color .2s;
+  -moz-transition: background-color .2s;
+  transition: background-color .2s; }
+
+#LiveHelpScroll::-webkit-scrollbar-thumb:vertical:active {
+  background-color: #9b9b9b;
+  border: 1px solid #8c8c8c; }
+
+#LiveHelpScroll::-webkit-scrollbar-thumb:horizontal {
+  width: 30px;
+  border: 1px solid rgba(140, 140, 140, 0.5);
+  background-color: rgba(155, 155, 155, 0.5);
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), inset 0 0 1px rgba(255, 255, 255, 0.8);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), inset 0 0 1px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), inset 0 0 1px rgba(255, 255, 255, 0.8);
+  -webkit-transition: background-color .2s;
+  -moz-transition: background-color .2s;
+  transition: background-color .2s; }
+
+#LiveHelpScroll::-webkit-scrollbar-thumb:horizontal:active {
+  background-color: #9b9b9b;
+  border: 1px solid #8c8c8c; }
+
+#LiveHelpMessages {
+  width: 290px;
+  text-align: left;
+  margin: 0 0 5px 0; }
+
+#LiveHelpMessages .message {
+  text-transform: none;
+  letter-spacing: normal; }
+
+.sent {
+  color: #666;
+  margin: 5px 0 5px; }
+
+.received {
+  color: #000;
+  margin: 5px 0 5px; }
+
+.LiveHelpLogin {
+  position: relative;
+  margin: 15px auto;
+  width: 220px;
+  border-radius: 6px;
+  margin: 15px auto;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  text-align: left;
+  color: #777; }
+
+.LiveHelpLogin label {
+  text-align: left;
+  float: none;
+  color: #777;
+  font-size: 12px;
+  line-height: normal;
+  padding: 0;
+  text-transform: none; }
+
+#LiveHelpEmbedded .button, #LiveHelpOffline .button {
+  display: inline-block;
+  padding: 0 25px;
+  margin: 0 auto;
+  border-radius: 18px;
+  height: 40px;
+  border: solid #ccc 1px;
+  background: #fefefe;
+  background: -webkit-linear-gradient(top, #fefefe, #e5e5e5);
+  background: -webkit-linear-gradient(top, #fefefe, #e5e5e5);
+  background: -moz-linear-gradient(top, #fefefe, #e5e5e5);
+  background: -o-linear-gradient(top, #fefefe, #e5e5e5);
+  background: -ms-linear-gradient(top, #fefefe, #e5e5e5);
+  background: linear-gradient(top, #fefefe, #e5e5e5);
+  -box-shadow: inset 0 0 5px white;
+  -webkit-box-shadow: inset 0 0 5px white;
+  -moz-box-shadow: inset 0 0 5px white;
+  font-family: 'Segoe UI Light', 'Segoe WP Light', 'Helvetica Neue', 'Source Sans Pro', sans-serif !important;
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 37px;
+  color: #666;
+  cursor: pointer;
+  text-indent: 0 !important; }
+
+#LiveHelpEmbedded .button:hover, #LiveHelpOffline .button:hover {
+  background: #fefdfd;
+  background: -webkit-linear-gradient(top, #fefefe, #d8d9d9);
+  background: -moz-linear-gradient(top, #fefefe, #d8d9d9);
+  background: -o-linear-gradient(top, #fefefe, #d8d9d9);
+  background: -ms-linear-gradient(top, #fefefe, #d8d9d9);
+  background: linear-gradient(top, #fefefe, #d8d9d9); }
+
+/* BubbleTip CSS */
+.bubbletip {
+  position: absolute;
+  z-index: 90000000;
+  width: auto;
+  border-collapse: collapse;
+  margin: 0;
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  direction: ltr;
+  padding: 0; }
+
+.bubbletip tr {
+  border: none; }
+
+.bubbletip td, .bubbletip th, .bubbletip table, .bubbletip table td, .bubbletip table th {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  line-height: normal; }
+
+.bubbletip td.bt-topleft {
+  background: transparent url(../../../images/bubbletip/bubbletip.png) no-repeat scroll 0px 0px;
+  height: 33px;
+  width: 33px; }
+
+.bubbletip td.bt-top {
+  background: transparent url(../../../images/bubbletip/bubbletip-T-B.png) repeat-x scroll 0px 0px;
+  height: 33px; }
+
+.bubbletip td.bt-topright {
+  background: transparent url(../../../images/bubbletip/bubbletip.png) no-repeat scroll -73px 0px;
+  height: 33px;
+  width: 33px; }
+
+.bubbletip td.bt-left-tail div.bt-left, .bubbletip td.bt-left {
+  background: transparent url(../../../images/bubbletip/bubbletip-L-R.png) repeat-y scroll 0px 0px;
+  width: 33px; }
+
+.bubbletip td.bt-left-tail div.bt-left-tail {
+  background: transparent url(../../../images/bubbletip/bubbletip.png) no-repeat scroll 0px -33px;
+  width: 33px;
+  height: 40px; }
+
+.bubbletip td.bt-right-tail div.bt-right, .bubbletip td.bt-right {
+  background: transparent url(../../../images/bubbletip/bubbletip-L-R.png) repeat-y scroll -33px 0px;
+  width: 33px; }
+
+.bubbletip td.bt-right-tail div.bt-right-tail {
+  background: transparent url(../../../images/bubbletip/bubbletip.png) no-repeat scroll -73px -33px;
+  width: 33px;
+  height: 40px; }
+
+.bubbletip td.bt-bottomleft {
+  background: transparent url(../../../images/bubbletip/bubbletip.png) no-repeat scroll 0px -73px;
+  height: 33px;
+  width: 33px; }
+
+.bubbletip td.bt-bottom {
+  background: transparent url(../../../images/bubbletip/bubbletip-T-B.png) repeat-x scroll 0px -33px;
+  height: 33px; }
+
+.bubbletip td.bt-bottomright {
+  background: transparent url(../../../images/bubbletip/bubbletip.png) no-repeat scroll -73px -73px;
+  height: 33px;
+  width: 33px; }
+
+.bubbletip table.bt-top, .bubbletip table.bt-bottom {
+  width: 100%; }
+
+.bubbletip table.bt-top th {
+  width: 50%;
+  background: transparent url(../../../images/bubbletip/bubbletip-T-B.png) repeat-x scroll 0px 0px; }
+
+.bubbletip table.bt-bottom th {
+  width: 50%;
+  background: transparent url(../../../images/bubbletip/bubbletip-T-B.png) repeat-x scroll 0px -33px; }
+
+.bubbletip table.bt-top td div {
+  background: transparent url(../../../images/bubbletip/bubbletip.png) no-repeat scroll -33px 0px;
+  width: 40px;
+  height: 33px; }
+
+.bubbletip table.bt-bottom td div {
+  background: transparent url(../../../images/bubbletip/bubbletip.png) no-repeat scroll -33px -73px;
+  width: 40px;
+  height: 33px; }
+
+.bubbletip td.bt-content {
+  background-color: #fff;
+  vertical-align: middle; }
+
+#LiveHelpEmbedded .MessageBackground {
+  background-image: none;
+  background: #eaeaea; }
+
+#LiveHelpEmbedded .OperatorBackground {
+  background: #f9f9f9;
+  background-image: none; }
+
+#LiveHelpCallAction .ChatActionText {
+  width: 124px;
+  height: 64px; }
+
+#LiveHelpCallAction {
+  display: none;
+  position: fixed;
+  right: 75px;
+  bottom: 50px;
+  z-index: 0; }
+
+#LiveHelpEmbedded {
+  display: none;
+  position: fixed;
+  bottom: -415px;
+  right: 85px;
+  z-index: 10000000;
+  width: 320px;
+  height: 450px;
+  line-height: normal;
+  text-shadow: none;
+  color: #000;
+  -moz-transition: none !important;
+  -webkit-transition: none !important;
+  -o-transition: all 0 none !important;
+  transition: none !important; }
+
+#LiveHelpEmbedded.opened {
+  bottom: -1px;
+  width: 320px !important;
+  -moz-transition: bottom 250ms ease !important;
+  -webkit-transition: bottom 250ms ease !important;
+  -o-transition: bottom 250ms ease !important;
+  transition: bottom 250ms ease !important; }
+  #LiveHelpEmbedded.opened #LiveHelpTab {
+    width: 322px !important; }
+
+#LiveHelpEmbedded.closed {
+  bottom: -415px;
+  -moz-transition: bottom 250ms ease !important;
+  -webkit-transition: bottom 250ms ease !important;
+  -o-transition: bottom 250ms ease !important;
+  transition: bottom 250ms ease !important; }
+
+#LiveHelpEmbedded * {
+  -moz-transition: none !important;
+  -webkit-transition: none !important;
+  -o-transition: all 0 none !important;
+  transition: none !important; }
+
+.LiveChatIcon {
+  display: none;
+  position: absolute;
+  left: -10px;
+  top: -15px;
+  z-index: 50000000; }
+
+#LiveHelpStatusText {
+  position: absolute;
+  font-family: 'Segoe UI Light', 'Segoe WP Light', 'Helvetica Neue', 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  line-height: 36px;
+  color: #333;
+  left: 35px;
+  z-index: 30000000;
+  color: #666 !important;
+  font-weight: 200 !important; }
+
+#LiveHelpStatusText.light {
+  color: #fff !important; }
+
+#LiveHelpInitiateChat {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  display: none;
+  z-index: 5000; }
+
+#LiveHelpCloseButton {
+  position: absolute;
+  display: none;
+  cursor: pointer;
+  right: 15px !important;
+  top: 15px !important;
+  width: 21px;
+  height: 8px;
+  z-index: 40000000; }
+
+#LiveHelpNotification {
+  position: absolute;
+  display: none;
+  top: -12px;
+  left: 90px;
+  z-index: 30000000;
+  font-family: "Helvetica Neue", "Segoe UI", Verdana, Arial, sans-serif;
+  font-size: 12px;
+  color: #fff;
+  text-align: center; }
+
+#LiveHelpNotification span {
+  height: 17px;
+  line-height: 17px; }
+
+#LiveHelpTab {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 36px;
+  width: 322px;
+  background-color: #0098D7 !important;
+  border-radius: 30px 30px 0 0;
+  cursor: pointer; }
+
+.OperatorBackground {
+  position: absolute;
+  top: 36px;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  background-color: #2b2b2b;
+  background-repeat: repeat-x;
+  border: 0 solid #afacac;
+  border-left-width: 1px;
+  border-right-width: 1px; }
+
+#LiveHelpOperatorImage {
+  position: absolute;
+  top: 5px;
+  left: 18px;
+  width: 40px;
+  height: 40px;
+  z-index: 20000000;
+  border-radius: 40px;
+  background-size: 40px !important; }
+
+.OperatorForeground {
+  position: absolute;
+  top: 0px;
+  z-index: 30000000;
+  background: transparent !important; }
+
+#LiveHelpOperatorNameBackground {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  right: 0;
+  height: 35px;
+  margin: 0 10px 0 70px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px; }
+
+#LiveHelpOperatorName {
+  position: absolute;
+  top: 2px;
+  left: 10px;
+  font-family: "Helvetica Neue", "Segoe UI", Verdana, Arial, sans-serif;
+  font-size: 15px;
+  color: #333 !important; }
+
+#LiveHelpOperatorDepartment {
+  position: absolute;
+  bottom: 2px;
+  left: 10px;
+  font-family: "Helvetica Neue", "Segoe UI", Verdana, Arial, sans-serif;
+  font-size: 12px;
+  color: #333 !important;
+  max-height: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+#LiveHelpBody {
+  position: absolute;
+  top: 36px;
+  left: 0;
+  height: 414px;
+  width: 100%;
+  background: #f9f6f6;
+  z-index: 40000000;
+  border: 0 solid #afacac;
+  border-left-width: 1px;
+  border-right-width: 1px; }
+
+#LiveHelpBackground {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  background-color: #f9f6f6;
+  background-repeat: repeat-x;
+  height: 13px;
+  width: 100%; }
+
+#LiveHelpCollapseButton {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: none; }
+
+#LiveHelpSignedIn {
+  display: none;
+  position: absolute;
+  left: 5px;
+  top: 25px;
+  right: 5px; }
+
+#LiveHelpScroll {
+  font-family: "Helvetica Neue", "Segoe UI", Verdana, Arial, sans-serif;
+  font-size: 12px;
+  height: 320px;
+  overflow: auto !important;
+  /* Bubble */ }
+  #LiveHelpScroll .message.bubble {
+    position: relative;
+    padding: 8px;
+    margin: 10px 40px 15px 20px;
+    background: #eaeaea;
+    border: none;
+    min-height: 14px;
+    border-radius: 4px; }
+  #LiveHelpScroll .message.bubble div {
+    color: #000;
+    margin: 0 5px;
+    word-wrap: break-word; }
+  #LiveHelpScroll .message.bubble .content {
+    margin-bottom: 3px;
+    word-break: break-word; }
+  #LiveHelpScroll .message.bubble .from {
+    bottom: 5px;
+    right: 5px;
+    font-size: 11px;
+    float: right;
+    color: rgba(0, 0, 0, 0.4) !important; }
+  #LiveHelpScroll .message.bubble.left div {
+    color: #fff; }
+  #LiveHelpScroll .message.bubble:after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    /* value = - border-top-width - border-bottom-width */
+    left: 50px;
+    /* controls horizontal position */
+    border-width: 15px 15px 0 0;
+    /* vary these values to change the angle of the vertex */
+    border-style: solid;
+    border-color: transparent #aae4f0;
+    /* reduce the damage in FF3.0 */
+    display: block;
+    width: 0; }
+  #LiveHelpScroll .message.bubble.left:after {
+    top: 9px;
+    left: -8px;
+    /* value = - border-left-width - border-right-width */
+    bottom: auto;
+    border-width: 6px 8px 6px 0;
+    /* vary these values to change the angle of the vertex */
+    border-color: transparent #eaeaea; }
+  #LiveHelpScroll .message.bubble.right {
+    margin: 10px 10px 10px 40px;
+    background: #aae4f0; }
+  #LiveHelpScroll .message.bubble.right::-moz-selection, #LiveHelpScroll .message.bubble.right div::-moz-selection {
+    background: #ccc;
+    color: #fff;
+    text-shadow: none; }
+  #LiveHelpScroll .message.bubble.right::selection, #LiveHelpScroll .message.bubble.right div::selection {
+    background: #ccc;
+    color: #fff;
+    text-shadow: none; }
+  #LiveHelpScroll .message.bubble.right:after {
+    top: 9px;
+    right: -8px;
+    /* value = - border-left-width - border-right-width */
+    bottom: auto;
+    left: auto;
+    border-width: 6px 0 6px 8px;
+    /* vary these values to change the angle of the vertex */
+    border-color: transparent #aae4f0; }
+  #LiveHelpScroll .message.bubble:after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    /* value = - border-top-width - border-bottom-width */
+    left: 50px;
+    /* controls horizontal position */
+    border-width: 0 0 20px 20px;
+    /* vary these values to change the angle of the vertex */
+    border-style: solid;
+    border-color: #eaeaea transparent;
+    /* reduce the damage in FF3.0 */
+    display: block;
+    width: 0; }
+
+#LiveHelpWaiting {
+  background: #faf6f7;
+  color: #666;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 5px;
+  width: 90%;
+  margin: 5px; }
+
+#LiveHelpSignIn {
+  position: absolute;
+  left: 0;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  height: 414px; }
+
+#LiveHelpSignInDetails, #LiveHelpBlockedChatDetails {
+  margin: 15px 2px 5px 2px;
+  font-size: 12px; }
+
+#LiveHelpMessagesEnd {
+  height: 3px; }
+
+#LiveHelpError {
+  display: none;
+  margin: 10px auto;
+  border-radius: 7px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border: 1px solid #9E1111;
+  background: #FFB0B0;
+  padding: 3px 15px 3px 8px;
+  width: 150px; }
+
+#LiveHelpErrorIcon {
+  margin: 2px 2px 2px 0px; }
+
+#LiveHelpErrorText {
+  margin: 2px;
+  float: right; }
+
+.LiveHelpLoginContent {
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px; }
+
+#LiveHelpEmbedded #LiveHelpLoginForm input, #LiveHelpEmbedded #LiveHelpLoginForm select, #LiveHelpEmbedded #LiveHelpLoginForm textarea {
+  color: #555;
+  outline: none;
+  padding: 3px;
+  margin: 2px 0 5px 0;
+  font-size: 16px;
+  width: 210px;
+  height: auto;
+  background: #FBFBFB;
+  border: none; }
+
+#LiveHelpEmbedded #LiveHelpLoginForm .Label {
+  color: #777; }
+
+.QuestionLabel div, #LiveHelpQuestionInput {
+  height: 50px; }
+
+.LiveHelpInput {
+  position: relative;
+  color: #555;
+  border: 1px solid #E5E5E5;
+  background: #fff;
+  padding: 3px;
+  height: 20px;
+  width: 210px;
+  margin: 2px 0;
+  -moz-box-shadow: inset 1px 1px 2px rgba(200, 200, 200, 0.2);
+  -webkit-box-shadow: inset 1px 1px 2px rgba(200, 200, 200, 0.2);
+  box-shadow: inset 1px 1px 2px rgba(200, 200, 200, 0.2); }
+
+#LiveHelpEmbedded #LiveHelpLogin input, #LiveHelpEmbedded #LiveHelpLogin textarea {
+  color: #555 !important;
+  outline: none !important;
+  resize: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-size: 16px !important;
+  width: 185px !important;
+  height: auto !important;
+  border: none !important;
+  background: #fff !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  -box-shadow: none !important;
+  min-height: 0 !important; }
+
+#LiveHelpEmbedded .LiveHelpLogin select, #LiveHelpEmbedded #LiveHelpLoginForm select {
+  color: #555 !important;
+  outline: none !important;
+  padding: 3px !important;
+  margin: 0 !important;
+  font-size: 16px !important;
+  width: 218px !important;
+  height: auto !important;
+  border: 1px solid #E5E5E5 !important;
+  background: #FBFBFB !important;
+  margin: 2px 0 !important;
+  -moz-box-shadow: inset 1px 1px 2px rgba(200, 200, 200, 0.2) !important;
+  -webkit-box-shadow: inset 1px 1px 2px rgba(200, 200, 200, 0.2) !important;
+  box-shadow: inset 1px 1px 2px rgba(200, 200, 200, 0.2) !important;
+  -webkit-appearance: menulist-button !important; }
+
+.InputError {
+  display: none;
+  position: absolute;
+  right: 5px;
+  top: 5px; }
+
+#LiveHelpDepartmentLabel {
+  display: none; }
+
+.LiveHelpDepartment {
+  position: relative; }
+
+.LiveHelpDepartment .InputError {
+  top: 8px;
+  right: 8px; }
+
+#LiveHelpEmbedded #LiveHelpConnectButton {
+  color: #666 !important;
+  text-shadow: none !important;
+  font-size: 20px !important;
+  line-height: 37px !important;
+  margin: 10px auto 0;
+  text-align: center;
+  cursor: pointer; }
+
+#LiveHelpInput {
+  position: absolute;
+  bottom: -70px;
+  height: 70px;
+  width: 100%;
+  background-color: #eaeaea;
+  background-repeat: repeat-x;
+  z-index: 50000000;
+  left: 1px; }
+
+#LiveHelpTyping {
+  display: none;
+  position: relative;
+  top: 4px;
+  color: #9e9d9d; }
+
+#LiveHelpTyping div {
+  margin-left: 10px;
+  float: left; }
+
+#LiveHelpTyping span {
+  position: absolute;
+  top: 0;
+  font-family: "Helvetica Neue", "Segoe UI", Verdana, Arial, sans-serif;
+  font-size: 10px;
+  margin-left: 5px;
+  left: 25px; }
+
+#LiveHelpMessageTextarea {
+  color: #000;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  padding: 2px 20px 2px 2px;
+  resize: none;
+  width: 275px;
+  height: 40px;
+  font-family: "Helvetica Neue", "Segoe UI", Verdana, Arial, sans-serif;
+  font-size: 12px;
+  min-height: 0;
+  overflow: auto;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border: 1px solid #d0d0bf;
+  line-height: normal;
+  outline: none; }
+
+#LiveHelpSmiliesButton {
+  position: absolute;
+  top: 24px;
+  right: 15px;
+  cursor: pointer; }
+
+#LiveHelpSendFileButton {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 240px;
+  cursor: pointer; }
+
+#LiveHelpInput #LiveHelpSendButton {
+  position: absolute;
+  top: 22px;
+  right: 10px;
+  cursor: pointer;
+  display: none; }
+
+#LiveHelpInput #LiveHelpSendButton div {
+  position: relative;
+  text-align: center;
+  line-height: 42px;
+  color: #fff;
+  font-family: "Helvetica Neue", "Segoe UI", Verdana, Arial, sans-serif;
+  font-size: 12px;
+  cursor: pointer; }
+
+#SmiliesTooltip {
+  display: none; }
+
+#SmiliesTooltip span, .Smilie {
+  display: inline-block;
+  margin: 1px; }
+
+/* Smilies Bubble pop-up */
+#LiveHelpEmbedded table * {
+  margin: 0;
+  padding: 0; }
+
+#SmiliesButton {
+  position: absolute;
+  bottom: 55px;
+  right: 50px;
+  z-index: 1; }
+
+#SmiliesBubble table.bt-bottom th {
+  width: 100%; }
+
+#LiveHelpFileDownload {
+  visibility: hidden;
+  display: none;
+  border: none; }
+
+#LiveHelpFileTransfer {
+  display: none; }
+
+#LiveHelpDisconnect {
+  display: none;
+  margin: 20px 20px 75px 20px; }
+
+#LiveHelpDisconnectButton, #LiveHelpCancelButton {
+  position: absolute;
+  text-align: center;
+  font-family: "Helvetica Neue", "Segoe UI", Verdana, Arial, sans-serif;
+  font-size: 14px;
+  cursor: pointer; }
+
+#LiveHelpDisconnectButton {
+  position: absolute;
+  bottom: 10px;
+  right: 125px;
+  color: #fff; }
+
+#LiveHelpCancelButton {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #999; }
+
+#LiveHelpDisconnectTitle {
+  font-family: 'Segoe UI Light', 'Segoe WP Light', 'Helvetica Neue', 'Source Sans Pro', sans-serif;
+  text-shadow: none;
+  font-size: 25px;
+  line-height: 28px;
+  color: #999; }
+
+#LiveHelpInitiateText {
+  position: relative;
+  left: 40px;
+  top: 145px;
+  width: 256px;
+  height: 35px;
+  z-index: 5001;
+  text-align: center;
+  font-family: "Helvetica Neue", "Segoe UI", Verdana, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold; }
+
+#LiveHelpRating {
+  position: relative;
+  height: 20px;
+  width: 90px;
+  margin: 0 auto; }
+
+#LiveHelpRating .Rating {
+  background: url(../../../images/star.png) no-repeat 0 0;
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  top: 0;
+  margin: 1px;
+  cursor: pointer; }
+
+#LiveHelpRating .VeryPoor {
+  left: 0; }
+
+#LiveHelpRating .Poor {
+  left: 16px; }
+
+#LiveHelpRating .Good {
+  left: 32px; }
+
+#LiveHelpRating .VeryGood {
+  left: 48px; }
+
+#LiveHelpRating .Excellent {
+  left: 64px; }
+
+#LiveHelpFeedbackRating {
+  text-align: center;
+  margin-top: 10px; }
+
+#LiveHelpEmbedded #LiveHelpToolbar {
+  position: absolute;
+  display: none;
+  right: 20px;
+  top: 5px;
+  width: 98px;
+  height: 20px; }
+
+#LiveHelpEmbedded #LiveHelpToolbar div {
+  position: absolute;
+  top: 0px;
+  opacity: 0.5; }
+
+#LiveHelpEmbedded #LiveHelpEmailChatToolbarButton {
+  display: none;
+  left: 0; }
+
+#LiveHelpEmbedded #LiveHelpSoundToolbarButton {
+  left: 20px; }
+
+#LiveHelpEmbedded #LiveHelpSwitchPopupToolbarButton {
+  left: 40px; }
+
+#LiveHelpEmbedded #LiveHelpFeedbackToolbarButton {
+  left: 60px; }
+
+#LiveHelpEmbedded #LiveHelpDisconnectToolbarButton {
+  left: 80px; }
+
+#LiveHelpSocialLogin {
+  visibility: hidden; }
+
+#LiveHelpTwitterButton, #LiveHelpFacebookButton {
+  margin: 5px;
+  cursor: pointer; }
+
+#LiveHelpCopyright {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  font-size: 10px;
+  text-align: center;
+  width: 100%; }
+
+#LiveHelpCopyright a {
+  font-size: 10px;
+  color: #339;
+  text-decoration: none;
+  font-family: "Helvetica Neue", "Segoe UI", Verdana, Arial, sans-serif;
+  font-size: 10px;
+  border-bottom-width: 0.05em;
+  border-bottom-style: solid; }
+
+#LiveHelpCopyright a:link, #LiveHelpCopyright a:visited, #LiveHelpCopyright a:active {
+  border-bottom-color: #CCCCCC; }
+
+#LiveHelpCopyright a:hover {
+  border-bottom-color: #339; }
+
+#FileTransferActionText {
+  margin: 20px 50px 0 60px; }
+
+#FileTransferDropTarget {
+  position: relative;
+  margin: 20px 100px 100px 100px;
+  width: 400px;
+  background: url(../../../images/FileTransferDocument.png) center center no-repeat;
+  height: 300px;
+  border: 7px dashed #7C7B7B;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px; }
+
+#FileTransferText {
+  display: none;
+  position: absolute;
+  top: 140px;
+  left: 138px; }
+
+#LiveHelpContent {
+  min-height: 415px;
+  min-width: 625px;
+  height: 100%;
+  margin: 0px auto;
+  text-align: center;
+  position: relative;
+  width: 100%; }
+
+#LiveHelpFooter {
+  bottom: 10px;
+  font-size: 10px;
+  position: absolute;
+  text-align: center;
+  width: 100%; }
+
+#Logo {
+  position: relative;
+  height: 60px; }
+
+#LogoImage {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  border-style: none; }
+
+#LiveHelpTypingPopup {
+  position: absolute;
+  display: none;
+  bottom: 95px;
+  left: 5px;
+  color: #9e9d9d; }
+
+#LiveHelpTypingPopup div {
+  margin-left: 10px;
+  float: left; }
+
+#LiveHelpTypingPopup span {
+  font-family: "Helvetica Neue", "Segoe UI", Verdana, Arial, sans-serif;
+  font-size: 10px;
+  margin-left: 5px; }
+
+#OfflineMessageForm table, #OfflineMessageForm table td, #OfflineMessageForm table tr {
+  border: none;
+  margin: auto;
+  padding: 3px; }
+
+#OfflineMessageForm input {
+  vertical-align: baseline; }
+
+#OfflineMessageForm .button {
+  color: #666 !important;
+  text-shadow: 0 0 1px #ccc !important;
+  font-size: 20px !important;
+  line-height: 37px !important; }
+
+.CloseButton.collapse {
+  visibility: visible; }
+
+.LiveHelpMobileButton {
+  display: none; }
+
+@media only screen and (max-width: 767px) {
+  .LiveHelpMobileButton {
+    position: fixed;
+    right: 20px;
+    bottom: 35px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    border: 1px solid #666;
+    cursor: pointer;
+    z-index: 9000000;
+    background-color: #31cbbb;
+    background-position: center center;
+    background: #31cbbb center center url("../../../images/MobileButton.png") no-repeat;
+    background-image: url('data:image/svg+xml;charset=utf-8,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0D%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2019.0.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0D%0A%3C%21DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%201.1%2F%2FEN%22%20%22http%3A%2F%2Fwww.w3.org%2FGraphics%2FSVG%2F1.1%2FDTD%2Fsvg11.dtd%22%3E%0D%0A%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%0D%0A%09%20viewBox%3D%220%200%2085%2079.9%22%20enable-background%3D%22new%200%200%2085%2079.9%22%20xml%3Aspace%3D%22preserve%22%3E%0D%0A%3Cpath%20id%3D%22XMLID_391_%22%20fill%3D%22%23FFFFFF%22%20d%3D%22M85%2C53.6c0%2C6-2.2%2C11.4-5.9%2C15.6c-1.1%2C1.2%2C1.4%2C9.7%2C1.4%2C9.7s-8-4.4-9.7-3.7%0D%0A%09c-2.8%2C1.2-5.9%2C1.8-9.1%2C1.8c-12.9%2C0-23.4-10.5-23.4-23.4s10.5-23.4%2C23.4-23.4S85%2C40.7%2C85%2C53.6z%22%2F%3E%0D%0A%3Cpath%20id%3D%22XMLID_397_%22%20fill%3D%22%23FFFFFF%22%20d%3D%22M32.9%2C53.6c0-15.9%2C12.9-28.8%2C28.8-28.8c5%2C0%2C9.7%2C1.3%2C13.8%2C3.5C71.1%2C12%2C56.1%2C0%2C38.4%2C0%0D%0A%09C17.2%2C0%2C0%2C17.2%2C0%2C38.4C0%2C48.2%2C3.7%2C57.2%2C9.8%2C64c1.8%2C2-2.2%2C15.9-2.2%2C15.9s13.2-7.2%2C15.9-6.1c4.6%2C1.9%2C9.6%2C3%2C14.9%2C3c2%2C0%2C3.9-0.1%2C5.8-0.4%0D%0A%09C37.4%2C71.1%2C32.9%2C62.9%2C32.9%2C53.6z%22%2F%3E%0D%0A%3C%2Fsvg%3E%0D%0A'), none;
+    background-size: 30px 28px; }
+
+  .LiveHelpMobileButton.show {
+    display: block; }
+
+  #LiveHelpTab {
+    display: none;
+    border-radius: 0; }
+
+  #LiveHelpEmbedded {
+    display: none !important;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100% !important; }
+
+  body.LiveHelpOpened {
+    overflow: hidden; }
+
+  #LiveHelpEmbedded.opened {
+    display: block !important;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100% !important;
+    height: 100%; }
+    #LiveHelpEmbedded.opened #LiveHelpTab {
+      display: block;
+      width: 100% !important; }
+
+  #LiveHelpBody {
+    height: calc(100% - 36px); }
+
+  #LiveHelpSignIn {
+    height: 100%; }
+
+  #LiveHelpSmiliesButton {
+    display: none !important; }
+
+  #LiveHelpTab, #LiveHelpMessages {
+    width: 100% !important; }
+
+  #LiveHelpMessageTextarea {
+    width: calc(100% - 50px); } }
+@media only screen and (max-height: 548px) {
+  #LiveHelpEmbedded.closed {
+    height: 370px;
+    bottom: -335px; }
+
+  #LiveHelpEmbedded.opened {
+    height: 370px;
+    bottom: -1px; }
+
+  #LiveHelpSignIn {
+    height: 334px; }
+
+  #LiveHelpMessageTextarea {
+    width: calc(100% - 105px); }
+
+  #LiveHelpScroll {
+    height: 240px; } }
+.sprite.Smilie {
+  display: inline-block; }
+
+.LiveChatIcon, #LiveHelpStatusText, .LiveHelpOperator, .OperatorImage {
+  cursor: pointer; }
+
+.LiveHelpOperator, .LiveHelpOnlineIcon {
+  position: absolute;
+  z-index: 50000000;
+  left: 10px !important;
+  top: -8px !important; }
+
+.OperatorImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-size: 50px !important; }
+
+#LiveHelpClosedChatMessage {
+  display: none;
+  text-align: center;
+  margin-left: 15px;
+  color: #000; }
+
+.flat-button {
+  padding: 10px 26px;
+  font-size: 16px !important;
+  font-family: "Helvetica Neue", "Segoe UI", Verdana, Arial, sans-serif !important;
+  line-height: 100%;
+  color: #fff;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 200 !important;
+  transition: background 0.1s ease-in-out;
+  -webkit-transition: background 0.1s ease-in-out;
+  -moz-transition: background 0.1s ease-in-out;
+  -ms-transition: background 0.1s ease-in-out;
+  -o-transition: background 0.1s ease-in-out;
+  color: #fff !important;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px; }
+
+.flat-button:active {
+  padding-top: 15px; }
+
+.flat-button, .flat-button:hover, .flat-button:active {
+  outline: 0 none;
+  text-decoration: none;
+  color: #fff !important; }
+
+.flat-button.white {
+  background-color: #F3F5F4;
+  color: #999 !important; }
+
+.flat-button.white:hover {
+  background-color: #e9e9e9;
+  color: #999 !important; }
+
+.flat-button.white:active {
+  color: #999 !important; }
+
+.flat-button.blue {
+  background-color: #67cce8; }
+
+.flat-button.blue:hover {
+  background-color: #39a8c7; }
+
+#LiveHelpConnecting {
+  height: 125px;
+  display: none;
+  margin-top: 100px;
+  text-align: center; }
+  #LiveHelpConnecting .connecting.container {
+    margin-top: 50px;
+    left: 15px; }
+  #LiveHelpConnecting .connecting-text {
+    font-family: "Helvetica Neue", "Segoe UI", Verdana, Arial, sans-serif;
+    padding-top: 15px;
+    text-shadow: none;
+    letter-spacing: 0;
+    font-size: 22px;
+    font-weight: 100;
+    line-height: normal;
+    color: #999; }
+
+#LiveHelpInitiateChatBubble {
+  display: block;
+  position: fixed;
+  right: 0;
+  bottom: -95px;
+  padding: 0 20px 15px 0;
+  width: 300px;
+  height: 80px;
+  z-index: 10000000;
+  /* Bubble */ }
+  #LiveHelpInitiateChatBubble .message.bubble {
+    font-family: "Helvetica Neue", "Segoe UI", Verdana, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: normal;
+    color: #333;
+    position: absolute;
+    right: 75px;
+    padding: 15px;
+    margin: 10px 0 15px 20px;
+    border: none;
+    min-height: 14px;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    cursor: pointer; }
+  #LiveHelpInitiateChatBubble .message.bubble div {
+    text-align: left;
+    /*
+    max-height: 32px;
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    */ }
+  #LiveHelpInitiateChatBubble .message.bubble:before {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    /* value = - border-top-width - border-bottom-width */
+    left: 50px;
+    /* controls horizontal position */
+    border-width: 15px 15px 0 0;
+    /* vary these values to change the angle of the vertex */
+    border-style: solid;
+    border-color: transparent #dbdbdb;
+    /* reduce the damage in FF3.0 */
+    display: block;
+    width: 0; }
+  #LiveHelpInitiateChatBubble .message.bubble:after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    /* value = - border-top-width - border-bottom-width */
+    left: 50px;
+    /* controls horizontal position */
+    border-width: 15px 15px 0 0;
+    /* vary these values to change the angle of the vertex */
+    border-style: solid;
+    border-color: transparent #ffffff;
+    /* reduce the damage in FF3.0 */
+    display: block;
+    width: 0; }
+  #LiveHelpInitiateChatBubble .message.bubble.right {
+    margin: 10px 10px 10px 0;
+    background: #ffffff; }
+  #LiveHelpInitiateChatBubble .message.bubble.right::-moz-selection, #LiveHelpInitiateChatBubble .message.bubble.right div::-moz-selection {
+    background: transparent;
+    color: #333; }
+  #LiveHelpInitiateChatBubble .message.bubble.right::selection, #LiveHelpInitiateChatBubble .message.bubble.right div::selection {
+    background: transparent;
+    color: #333; }
+  #LiveHelpInitiateChatBubble .message.bubble.right:before {
+    top: 8px;
+    right: -9px;
+    /* value = - border-left-width - border-right-width */
+    bottom: auto;
+    left: auto;
+    border-width: 8px 0 8px 9px;
+    /* vary these values to change the angle of the vertex */
+    border-color: transparent #dbdbdb; }
+  #LiveHelpInitiateChatBubble .message.bubble.right:after {
+    top: 9px;
+    right: -8px;
+    /* value = - border-left-width - border-right-width */
+    bottom: auto;
+    left: auto;
+    border-width: 7px 0 7px 8px;
+    /* vary these values to change the angle of the vertex */
+    border-color: transparent #ffffff; }
+  #LiveHelpInitiateChatBubble .operator.photo {
+    position: absolute;
+    right: 20px;
+    top: 8px;
+    width: 50px;
+    height: 50px;
+    background-size: 50px;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    border: 1px solid #a4a2a2;
+    cursor: pointer; }
+  #LiveHelpInitiateChatBubble .operator.badge {
+    display: none; }
+
+.sprite.embed { background-image: url('../../../images/SpriteEmbed.png') !important; background-repeat: no-repeat !important; }
+.sprite.embed.CloseButton.collapse { background-position: 0px 0px !important; width: 21px; height: 8px; }
+.sprite.embed.CloseButton.collapse.light { background-position: 0px -10px !important; width: 21px; height: 8px; }
+.sprite.embed.CloseButton.expand { background-position: -23px 0px !important; width: 21px; height: 8px; }
+.sprite.embed.CloseButton.expand.light { background-position: -23px -10px !important; width: 21px; height: 8px; }
